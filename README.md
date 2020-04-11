@@ -24,8 +24,9 @@
 ７、POP3で利用可能な専用のメールアドレスが必要です  
 ８、事前に情シスに相談すること  
 ９、自分で全責任が取れること  
-１０、起動したＰＣを自宅などから操作できるようにするためのソフトがインストールされていること
+１０、クライアントPCを自宅などから操作できるようにするためのソフトがあらかじめクライアントPCにインストールされていること  
 　　　例えばソフトイーサ社の[Desktop VPN](https://www.desktopvpn.net/)やTeamViewer AG社の[TeamViewer](https://www.teamviewer.com/ja/)など。  
+　　　本スクリプトはWakeOnLanパケットをLAN上に送って目的のPCを起動させるだけです。起動したPCについてはその後関与しません。    
 
 検証は初代Raspberry Pi model Bで行いました。  
 検証に使用したOSは2020-02-13-raspbian-buster.zip。  
