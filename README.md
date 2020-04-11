@@ -55,7 +55,8 @@ POP3で受信可能なメールアドレスを作る。もしくは作って貰�
 
 ３、【サーバPC】  
 ３－１、サーバPCにlinuxをインストール  
-※動作確認したのはraspbian  
+※動作確認で使用したのは初代raspberry pi model B  
+※raspberry piなら安く作れると思う  
 
 ３－２、rubyをインストール  
 (例)sudo apt-get install ruby  
