@@ -98,7 +98,7 @@ begin
 					puts 'magicnumber mismatch'
 				end
 
-#				m.delete()
+				m.delete()
 
 				mailno = mailno + 1
 			end
