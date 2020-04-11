@@ -114,4 +114,3 @@ end
 # 全メールを削除。
 # 運悪くこのタイミングで届いたメールは消されるが再送信に期待する。
 Net::POP3.delete_all(pop3svr, pop3port, pop3id, pop3pw, false)
-
