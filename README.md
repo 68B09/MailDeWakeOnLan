@@ -73,8 +73,9 @@ POP3で受信可能なメールアドレスを作る。もしくは作って貰�
 
 もちろんクライアントPCの電源は事前にOFFであること。  
 
-３－４、このページからダウンロードした maildewol.rb を /usr/local/bin に配置する  
-rootがmaildewol.rbを実行できるように、chmod 755とでもしておく。  
+３－４、このページから maildewol.rb をダウンロード後、実行許可を与える  
+wget https://raw.githubusercontent.com/68B09/MailDeWakeOnLan/master/maildewol.rb  
+chmod 755 maildewol.rb
 
 ３－５、maildewol.rbをエディタで開いて下記項目を設定して保存する  
 ・magicnumber…合い言葉。なんでもいい。英大小文字と数字の組み合わせで、出来れば10文字以上で定義する。  
@@ -88,7 +89,7 @@ rootがmaildewol.rbを実行できるように、chmod 755とでもしておく�
 メモして帰るか、プライベートメールに送信するなどして忘れないよう要請しておきましょう。  
 
 ４、【初期動作確認】  
-４－１、サーバPCで maildewol.rb を実行する  
+４－１、maildewol.rb を実行する  
 下記のメッセージが表示されたならOK。  
 ※日時は異なる  
 *****  
@@ -109,7 +110,7 @@ hogehoge
 
 MACアドレスの桁区切り文字は':'以外に'-'でもOK。  
 
-４－４、サーバPCで maildewol.rb を実行する  
+４－４、maildewol.rb を実行する  
 下記のメッセージが表示され、かつ、クライアントPCが起動したならOK。  
 ※日時やメールアドレス、MACアドレスは異なる  
 *****  
@@ -123,7 +124,11 @@ wakeonlan result:true
 
 メールサーバが忙しいときはメールが届くのに時間がかかるため、「empty」が表示された場合はほどよく待ってから何度か試す。  
 
-４－５、crontabに下記の１行を追加する  
+４－５、maildewol.rb を /usr/local/bin に移動後、だれでも実行できるようにする  
+sudo cp maildewol.rb /usr/local/bin  
+sudo chmod 755 /usr/local/bin/maildewol.rb  
+
+４－６、crontabに下記の１行を追加する  
 */2 * * * * root /usr/local/bin/maildewol.rb 1>> /var/log/maildewol.log 2>> /var/log/maildewol.log  
 
 「*/2」は「２分間隔で」の意。  
